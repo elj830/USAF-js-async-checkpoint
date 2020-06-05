@@ -1,7 +1,10 @@
 
 var getPokemonType = (input) => {
     //take the input and split on each new line to be able to individually check pokemon type
-    let pokeMonList = input.split('\n')
+    var fs = require ("fs")
+
+    let pokemonList = fs.readFileSync(input).toString().split('\n')
+
     
     //Individual fetch requests for every pokemon input
     pokeMonList.forEach(pokemon =>  function (pokemon) {
